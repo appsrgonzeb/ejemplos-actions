@@ -10,7 +10,20 @@ on:
 
 jobs:
   saludar:
+    
     runs-on: ubuntu-latest
     steps:
+      # Paso 1
       - name: Muestra mensaje hola mundo
         run: echo "hola mundo, Felipe"
+
+      # Paso 2: obtiene los archivos del repositorio
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+      # Paso 3
+      - name: Listar los archivos del repositorio
+        # Ejecuta varios pasos en una sola linea (linea 24 y 25)
+        run: |
+          echo "El repositorio ${{ github.repository }} contiene los siguientes archivos:"
+          tree
+      
