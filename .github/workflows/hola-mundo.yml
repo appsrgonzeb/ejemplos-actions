@@ -1,6 +1,6 @@
 name: hola mundo
 
-no: [push]
+on: [push]
 
 jobs:
   saludar:
