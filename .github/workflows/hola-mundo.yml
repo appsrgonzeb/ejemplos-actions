@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+    paths:
+      - 'codigo/**' # El Job se ejecutará cuando se haga un push que involucre la carpeta 'codigo'
+      - '.github/workflows/hola-mundo.yml' # El job se ejecutaá cuando se modifique y se haga un push de este archivo.
+
     pull_request:
       branches:
         - main
