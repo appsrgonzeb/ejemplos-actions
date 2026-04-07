@@ -15,7 +15,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    spteps:
+    steps:
       - name: Mostrando los valores de los inputs
       run: |
         echo "Label: {{ inputs.texto }}
