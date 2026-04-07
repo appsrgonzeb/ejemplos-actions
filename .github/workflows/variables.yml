@@ -3,7 +3,7 @@ name: Variables
 on:
   workflow_dispatch: 
 
-# Variables de ambiente (enviroment)
+# 'Variables de ambiente (enviroment)'
 env:
   variable_global: VARIABLE GLOBAL
 
@@ -16,7 +16,7 @@ jobs:
       - name: estep 1 del job-1
         run: |
           echo el valor de la variable global es $variable_global
-          echo 'otra forma de escribir la variable es: ${{ env.variable_global }}
+          echo 'otra forma de escribir la variable es: ${{ env.variable_global }}'
           echo 'también podemos definir variables a nivel de un único job: ${{ env.variable_job }}'
       
   
