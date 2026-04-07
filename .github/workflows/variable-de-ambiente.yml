@@ -1,0 +1,20 @@
+name: Variable de ambiente
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+
+      - name: Configura variable de ambiente
+        run: echo 'MI_VARIABLE=hola mundo, Richard' >> $GITHUB_ENV # MI_VARIABLE se usará en el .js
+
+      # Vamos a usar Node.js para ejecutar el main.js, Node.js ya viene en el  ubuntu-latest
+      - name: Ejecuta archivo de JavaScript
+        run: node main.js
+        
+        
