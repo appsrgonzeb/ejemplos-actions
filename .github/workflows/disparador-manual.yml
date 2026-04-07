@@ -17,6 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mostrando los valores de los inputs
-      run: |
-        echo "Label: {{ inputs.texto }}
-        echo "Build: {{ inputs.build }}
+        run: |
+          echo "Label: {{ inputs.texto }}
+          echo "Build: {{ inputs.build }}
